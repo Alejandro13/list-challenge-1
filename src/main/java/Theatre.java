@@ -6,14 +6,10 @@ import java.util.*;
 import java.util.regex.Pattern;
 
 /***
- *
  * https://www.baeldung.com/junit-5-test-order
  * Create a Theatre class with a name, list of seats, number of rows and number of seats.
  * Add methods to reserve, cancel reservation and print seating chart
  * The reserve method must prevent dups
- *
- *
- *
  */
 @Getter
 @Setter
@@ -85,7 +81,7 @@ public class Theatre {
         return cancelados;
     }
 
-    public static void printChart(List<List<String>> cinema, int reservados, int cancelados){
+    public static void printChart(List<List<String>> cinema, int reservados, int totalAsientos){
         // print method will show free, reserved and total amount of sold seats, free and reserved.
         for(List<String> fila : cinema){
             //Con el if evitamos imprimir la fila 0 que esta vacia
@@ -93,6 +89,10 @@ public class Theatre {
                 System.out.println(fila);
             }
         }
+        int available =totalAsientos - reservados;
+        System.out.println("Total Available: " + available);
+        System.out.println("Total Sold: " +  reservados);
+        System.out.println("Total Income: " + reservados*50);
 
     }
 

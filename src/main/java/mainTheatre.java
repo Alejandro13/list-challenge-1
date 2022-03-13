@@ -40,7 +40,9 @@ public class mainTheatre {
 
         reservados = Theatre.reserve(cinema,asientosReservados,filaLetra,reservados);
         cancelados = Theatre.cancelReservation(cinema,asientosCancelados,filaLetra, cancelados);
-        Theatre.printChart(cinema,reservados,cancelados);
+        Theatre.printChart(cinema,reservados,total);
+
+
 
 
     }
