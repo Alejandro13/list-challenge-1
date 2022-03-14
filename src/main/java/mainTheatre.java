@@ -27,20 +27,31 @@ public class mainTheatre {
             filaLetra.put((char) letra,filaNumber);
         }
 
-        String[] asientosPorReservar =  {"aE3","A4","A7","A4","D3","A3","D4","D5","C7","B4","H7"};
+        String[] noPermitidos = {"a0","A400","X7","","00","AA","D4"};
+        String[] cancelados2 = {"A4"};
+        String[] asientosPorReservar =  {"a3","A4","A7","D3","D4","D5","C7","B4","H7"};
         for(String asiento : asientosPorReservar){
             asientosReservados.add(asiento);
         }
 
-        String[] canceladoss =  {"A4"};
+        reservados = Theatre.reserve(cinema,asientosReservados,filaLetra,reservados);
+       /* asientosReservados.removeAll(asientosReservados);
+        for(String asiento : noPermitidos){
+            asientosReservados.add(asiento);
+        }
+        reservados = Theatre.reserve(cinema,asientosReservados,filaLetra,reservados);*/
+
+       /* String[] canceladoss =  {"A4"};
         for(String asiento : canceladoss){
             asientosCancelados.add(asiento);
-        }
+        }*/
 
 
-        reservados = Theatre.reserve(cinema,asientosReservados,filaLetra,reservados);
+        asientosCancelados.add("A4");
         cancelados = Theatre.cancelReservation(cinema,asientosCancelados,filaLetra, cancelados);
         Theatre.printChart(cinema,reservados,total);
+
+        System.out.println("fin");
 
 
 

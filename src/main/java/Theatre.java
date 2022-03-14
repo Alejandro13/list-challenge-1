@@ -40,8 +40,8 @@ public class Theatre {
                     System.out.println("EL ASIENTO "+ fila+columna + " ESTA OCUPADO");
                     //return false;
                 }else {
-                    //Reservamos el asiento para la persona
-                    cinema.get(fila2).set(columna2, fila + columna);
+                    //Reservamos el asiento para la persona, restamos -1 a la columna para comenzar desde la posion 0
+                    cinema.get(fila2).set(columna2-1, fila + columna);
                     reservados += 1;
                 }
             }else{ //SI EL ASIENTO NO ES VALIDO
@@ -65,12 +65,12 @@ public class Theatre {
                 int columna2 = Integer.parseInt(columna);
 
                 //REVISAMOS SINO ESTA OCUPADO EL ASIENTO
-                if( cinema.get(fila2).get(columna2) == ".") {
+                if( cinema.get(fila2).get(columna2-1) == ".") {
                     System.out.println("EL ASIENTO "+ fila+columna + " NO ESTA OCUPADO, NO SE PUEDE CANCELAR");
                     //return false;
                 }else {
                     //Cancelamos el asiento para la persona
-                    cinema.get(fila2).set(columna2, ".");
+                    cinema.get(fila2).set(columna2-1, ".");
                     cancelados += 1;
                     System.out.println("EL ASIENTO "+ fila+columna + " SE DESOCUPO");
                 }
@@ -82,6 +82,7 @@ public class Theatre {
     }
 
     public static void printChart(List<List<String>> cinema, int reservados, int totalAsientos){
+        int price = 50;
         // print method will show free, reserved and total amount of sold seats, free and reserved.
         for(List<String> fila : cinema){
             //Con el if evitamos imprimir la fila 0 que esta vacia
@@ -92,8 +93,7 @@ public class Theatre {
         int available =totalAsientos - reservados;
         System.out.println("Total Available: " + available);
         System.out.println("Total Sold: " +  reservados);
-        System.out.println("Total Income: " + reservados*50);
-
+        System.out.println("Total Income: " + reservados*price);
     }
 
 }

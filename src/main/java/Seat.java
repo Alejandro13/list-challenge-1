@@ -7,10 +7,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Seat {
     //Create a Seat class with line, row and price properties.
-    private char line;
-    private int row;
+    private char row;
+    private int col;
     private double price;
-
-
-
 }
