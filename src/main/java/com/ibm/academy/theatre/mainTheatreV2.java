@@ -1,3 +1,8 @@
+package com.ibm.academy.theatre;
+
+import com.ibm.academy.theatre.Seat;
+import com.ibm.academy.theatre.TheatreV2;
+
 import java.util.ArrayList;
 import java.util.List;
 

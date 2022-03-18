@@ -1,14 +1,18 @@
 # List Challenge
-You are writing an application to reserve seats for a Theatre using a list of objects.
-The Theatre has *i* number of rows named by a capital letter from A-H (i) and *i* number of seats per row (cols);
+You are writing an application to reserve seats for a com.ibm.academy.theatre.Theatre using a list of objects.
+The com.ibm.academy.theatre.Theatre has *i* number of rows named by a capital letter from A-H (i) and *i* number of seats per row (cols);
 
-- Create a Seat class with line, row and price properties.
-- Create a Theatre class with a name, list of seats, number of rows and number of seats.
+- Create a com.ibm.academy.theatre.Seat class with line, row and price properties.
+- Create a com.ibm.academy.theatre.Theatre class with a name, list of seats, number of rows and number of seats.
 - Add methods to *reserve*, *cancel reservation* and *print* seating chart
 - The reserve method must prevent **dups**
 - *print* method will show free, reserved and total amount of sold seats, free and reserved.
 
 Use JUnit to verify methods.
+
+## PARA TOMAR EN CUENTA
+- https://www.vogella.com/tutorials/JavaRegularExpressions/article.html 
+- https://www.arhohuttunen.com/junit-5-parameterized-tests/
 
 ## Example
 Having a 8x8 theatre
@@ -50,5 +54,4 @@ Regex
 Collections
 String
 Integer
-## PARA expresiones regulares
-https://www.vogella.com/tutorials/JavaRegularExpressions/article.html
+

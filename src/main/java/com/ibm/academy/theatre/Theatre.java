@@ -1,3 +1,5 @@
+package com.ibm.academy.theatre;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +9,7 @@ import java.util.regex.Pattern;
 
 /***
  * https://www.baeldung.com/junit-5-test-order
- * Create a Theatre class with a name, list of seats, number of rows and number of seats.
+ * Create a com.ibm.academy.theatre.Theatre class with a name, list of seats, number of rows and number of seats.
  * Add methods to reserve, cancel reservation and print seating chart
  * The reserve method must prevent dups
  */

@@ -1,3 +1,5 @@
+package com.ibm.academy.theatre;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;

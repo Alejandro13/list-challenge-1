@@ -1,3 +1,7 @@
+package com.ibm.academy.theatre;
+
+import com.ibm.academy.theatre.Theatre;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -39,7 +43,7 @@ public class mainTheatre {
         for(String asiento : noPermitidos){
             asientosReservados.add(asiento);
         }
-        reservados = Theatre.reserve(cinema,asientosReservados,filaLetra,reservados);*/
+        reservados = com.ibm.academy.theatre.Theatre.reserve(cinema,asientosReservados,filaLetra,reservados);*/
 
        /* String[] canceladoss =  {"A4"};
         for(String asiento : canceladoss){

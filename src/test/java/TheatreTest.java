@@ -1,10 +1,9 @@
+import com.ibm.academy.theatre.Seat;
+import com.ibm.academy.theatre.TheatreV2;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.NullAndEmptySource;
-import org.junit.jupiter.params.provider.ValueSource;
-import org.mockito.internal.matchers.Null;
 
 import java.util.ArrayList;
 import java.util.Arrays;
