@@ -2,7 +2,7 @@ package com.ibm.academy.arrays;
 
 import java.util.Arrays;
 
-public class Challenge {
+public class ChallengeOrdenamiento {
     public static void main(String[] args) {
         int[] numeros = new int[]{6,7,2,5,9,4,1};
         int ultimo = numeros.length-1;
