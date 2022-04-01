@@ -3,22 +3,17 @@ package com.ibm.academy.patterns.creacionales.abstractfactory.exercise;
 public class RelacionalFactory implements AbstractFactory<AlumnosRepository>{
 
     @Override
-    public AlumnosRepository createRepositoryAlumnos(String alumno) {
-        if("NOSQL".equals(alumno)){
-            return new AlumnosNoSQLRepository();
-        }else if("SQL".equals(alumno)){
-            return new AlumnosRelacionalRepository();
-        }
-        return null;
+    public AlumnosRepository createRepositoryAlumnos() {
+        return new AlumnosRelacionalRepository();
     }
 
+    /**
+     *  CursoRelacionalRepository tiene que implementar AlumnosRepository para poder devolver una instancia de real,
+     *  ya que si realizamos un cast con AlumnosRepository, nos mandará un error de conversión
+     */
     @Override
-    public AlumnosRepository createRepositoryCursos(String curso) {
-        if("NOSQL".equals(curso)){
-            return (AlumnosRepository) new CursoNoSQLRepository();
-        }else if("SQL".equals(curso)){
-            return (AlumnosRepository) new CursoRelacionalRepository();
-        }
-        return null;
+    public AlumnosRepository createRepositoryCursos() {
+        //return (AlumnosRepository) new CursoRelacionalRepository(); -> marca error en tiempo de ejecución
+        return new CursoRelacionalRepository();
     }
 }
