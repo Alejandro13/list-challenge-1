@@ -13,7 +13,8 @@ public class LecheDecorator extends AdicionalesDecorator{
 
     @Override
     public void precio() {
-        super.precio();
+        //super.precio();
+        System.out.println("El precio del cafe con CREMA es de: $70" );
     }
 
     private void configLeche(){

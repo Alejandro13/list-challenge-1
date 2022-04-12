@@ -22,8 +22,10 @@ public class RunCafe {
         descafeinado.precio();
         System.out.println("-------- CAFE NORMAL CON LECHE Y CREMA------");
         normal2.description();
+        normal2.precio();
         System.out.println("-------- CAFE DESCAFEINADO CON LECHE Y AZUCAR------");
         descafeinado2.description();
+        descafeinado2.precio();
 
     }
 }
